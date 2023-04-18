@@ -20,7 +20,7 @@ class User(Base):
         
     def __repr__(self):
         return f"({self.id}) {self.name}"
-    
+
 
 
 engine = create_engine('sqlite:///user.db')
@@ -28,11 +28,15 @@ Base.metadata.create_all(bind=engine)
 
 session = sessionmaker(bind=engine)
 session = session()
-    
+
+
 
 user1 = User(1,  "Nick")
 user2 = User(2, "Bob")
 user3 = User(3, "Jenna")
+user4 = User(44,  "Iggy")
+user5 = User(222, "Elif")
+user6 = User(89, "George")
 
-session.add_all([user1, user2, user3])
+session.add_all([user1, user2, user3, user4, user5, user6])
 session.commit()
