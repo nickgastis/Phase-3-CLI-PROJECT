@@ -1,1 +1,2 @@
 Trash: take out the trash [Priority: High]
+Walk the dog: Cliff needs to be walked! [Priority: Crucial]
